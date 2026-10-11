@@ -13,9 +13,10 @@ export const Forgotpassword=()=>{
                    alert(response.data);
                    navigate("/resetPassword");
             }catch(error){
-                const errors=error.response.data;
-                const firstError=Object.values(errors)[0];
-                  alert(firstError);
+                const errorMessage = error?.response?.data
+                    ? Object.values(error.response.data)[0]
+                    : (error?.message || "Network error. Please try again.");
+                alert(errorMessage);
             }
     }
     return(

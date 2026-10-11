@@ -220,7 +220,7 @@ http://localhost:5173
 
 ## 🔗 Related Backend Repository
 
-This frontend is designed to work with the **Smart Campus Helpdesk Backend**, built using **Spring Boot**, **Spring Security**, **Spring Data JPA**, **Redis**, **MySQL**, and **JWT Authentication**.
+This frontend is designed to work with the **Smart Campus Helpdesk Backend**, built using **Spring Boot**, **Spring Security**, **Spring Data JPA**, **PostgreSQL**, and **JWT Authentication**.
 
 ---
 

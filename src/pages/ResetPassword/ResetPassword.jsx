@@ -20,9 +20,10 @@ export const ResetPassword=()=>{
         alert(response.data);
         navigate("/login");
        }catch(error){
-        const errors=error.response.data;
-        const firstError=Object.values(errors)[0];
-        alert(firstError);
+        const errorMessage = error?.response?.data
+            ? Object.values(error.response.data)[0]
+            : (error?.message || "Network error. Please try again.");
+        alert(errorMessage);
        }
     }
 
@@ -36,9 +37,10 @@ const response= await forgotPassword({email});
        alert(response.data);
         }
     catch(error){
-        const errors=error.response.data;
-        const firstError=Object.values(errors)[0];
-        alert(firstError);
+        const errorMessage = error?.response?.data
+            ? Object.values(error.response.data)[0]
+            : (error?.message || "Network error. Please try again.");
+        alert(errorMessage);
     }
         
     }
